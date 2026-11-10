@@ -1,0 +1,9 @@
+function sendDailyBackup() {
+  // Firebase හෝ LocalStorage වල ඇති දත්ත ගෙන Email එකක් යැවීම
+  var email = "sahansadeep.ra@email@gmail.com"; 
+  var subject = "DebtCollector Auto Daily Backup - " + new Date().toLocaleDateString();
+  var body = "මෙය ඔබේ Credit & Collection System එකේ දිනපතා ස්වයංක්‍රීයව එවන ලද Backup එකයි.";
+  
+  // මෙහිදී PDF හෝ JSON ගොනුවක් අමුණා (Attach කර) යැවිය හැක
+  MailApp.sendEmail(email, subject, body);
+}
